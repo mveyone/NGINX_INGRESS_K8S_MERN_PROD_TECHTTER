@@ -2,7 +2,8 @@ import axios from 'axios';
 
 import { ADDNEW_TODO, GETALL_TODO, TOGGLE_TODO, UPDATE_TODO, DELETE_TODO, TOGGLE_TAB } from './type';
 
-const API_URL = 'http://workouts.com/api';
+// const API_URL = 'http://workouts.com/api';  K8S_IGRESS_MKUBE
+const API_URL = 'http://localhost:4000';  //LOCAL AND COMPOSE
 
 export const addNewTodo = (data) => async (dispatch) => {
     try {
