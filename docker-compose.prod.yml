@@ -1,0 +1,26 @@
+version: "3.8"
+services:
+  api:
+    # image: mveyone/todo2-mern-api-dev:latest
+    build: ./api
+    ports: 
+      - "4000:4000"
+    networks:
+      - todo-app
+  client:
+    # image: mveyone/todo2-mern-client-dev:latest
+    build: ./client
+    stdin_open: true
+    # ports: 
+    #   - "4000:4000"
+    networks:
+      - todo-app
+  nginx:
+    build: ./nginx
+    ports:
+      - "80:80"
+    networks:
+      - todo-app
+networks:
+  todo-app:
+    driver: bridge

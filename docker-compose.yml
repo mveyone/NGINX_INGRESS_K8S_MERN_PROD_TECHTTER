@@ -23,7 +23,7 @@ services:
   #Back-end Spring Boot Application
   api:
     #The docker file in scrum-app build the jar and provides the docker image with the following name.
-    image: mveyone/todo2-mern-api:latest
+    image: mveyone/todo2-mern-api-dev:latest
     build: ./api
     container_name: api
 
@@ -40,7 +40,7 @@ services:
 
   #Fron-end Angular Application
   client:
-    image: mveyone/todo2-mern-client:latest
+    image: mveyone/todo2-mern-client-dev:latest
     build: ./client
     container_name: client
     ports:
